@@ -1,4 +1,4 @@
-name: 'Copy-PR Action'
+name: 'Pull Request to another repo'
 description: 'GitHub Action for copying files to another repository and raising a PR'
 inputs:
   destination_repo:
