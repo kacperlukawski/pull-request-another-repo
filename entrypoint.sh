@@ -35,7 +35,7 @@ git config --global user.email "${EMAIL}"
 CLONE_DIR=$(mktemp -d)
 
 echo "Cloning source git repository"
-git clone --branch main --single-branch --depth 1 https://${GH_TOKEN}@github.com/${SOURCE_REPO}.git
+git clone --branch ${GITHUB_HEAD_REF} --single-branch --depth 1 https://${GH_TOKEN}@github.com/${SOURCE_REPO}.git
 
 if [ "$?" -ne 0 ]; then
     echo >&2 "Cloning '${SOURCE_REPO}' failed"
